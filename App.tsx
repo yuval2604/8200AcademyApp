@@ -17,8 +17,9 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
+        <StatusBar hidden={true} />
          <AppContainer/>
-        <StatusBar />
+      
       </SafeAreaProvider>
     );
   }
