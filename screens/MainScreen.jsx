@@ -1,17 +1,15 @@
 import React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {createStackNavigator} from 'react-navigation-stack';
-import {Color} from '../constants/Colors';
 import TabOneScreen from './TabOneScreen';
 import TabTwoScreen from './TabTwoScreen';
 import Icon from "react-native-vector-icons/FontAwesome";
-import theme  from "../constants/theme";
+import theme  from "../constants/theme2";
 import {createAppContainer} from 'react-navigation';
 
 const MainScreen = createBottomTabNavigator(
     {
 
-        Explore: {
+        About: {
             screen: TabOneScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
@@ -19,16 +17,16 @@ const MainScreen = createBottomTabNavigator(
                 )
             }
         },
-        Mytrip: {
+        Subject: {
             screen: TabTwoScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
-                    <Icon name="calendar" size={25} color={tintColor} />
+                    <Icon name="sort" size={25} color={tintColor} />
                 )
             }
         },
-        Favourite: {
-            screen: TabOneScreen,
+        Inside: {
+            screen: TabTwoScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="bookmark-o" size={25} color={tintColor} />
@@ -36,7 +34,7 @@ const MainScreen = createBottomTabNavigator(
             }
         },
         Profile: {
-            screen: TabTwoScreen,
+            screen: TabOneScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="user-o" size={25} color={tintColor} />
@@ -45,7 +43,7 @@ const MainScreen = createBottomTabNavigator(
         },
     },
     {
-        initialRouteName: 'Explore',
+        initialRouteName: 'About',
         tabBarOptions: {
             activeTintColor: theme.COLORS.Secondary
         }
