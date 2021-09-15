@@ -1,10 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, Image, TouchableOpacity, View, Dimensions, RefreshControl } from 'react-native';
-import { Header } from 'react-navigation-stack';
 import ImageHeaderScrollView from 'react-native-image-header-scroll-view';
 import HeaderImageScrollView from 'react-native-image-header-scroll-view';
 import Block from '../components/Block';
 import CardAbout from '../components/CardAbout';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+
+
+
+
 class BasicUsage extends React.Component {  
 
   render() {
@@ -40,7 +44,7 @@ const renderMockCards = () => {
   return (
     mockCard.map((card, i) => {
      return(
-        <CardAbout imageurl={card.imageurl} header={mockCard[i].header} secondHeader={mockCard[i].secondHeader} text={mockCard[i].text}  />
+        <CardAbout key={i} imageurl={card.imageurl} header={mockCard[i].header} secondHeader={mockCard[i].secondHeader} text={mockCard[i].text}  />
   )}))
 }
 

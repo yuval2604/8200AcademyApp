@@ -4,7 +4,10 @@ import { Text, View } from '../components/Themed';
 import Block from './Block';
 import Image from './Image';
 import Button from './Button';
-const CardAbout = ({ imageurl, header, secondHeader, text, link=null }) => {
+import { createStackNavigator, createAppContainer } from 'react-navigation';  
+
+
+const CardAbout = ({ acion =null , imageurl, header, secondHeader, text, link = null }) => {
   return (
    <View style={styles.container}>
      <Block marginTop={20} paddingHorizontal={50} style={styles.BlockContainer}height={400} paddingTop={10}>
@@ -24,15 +27,17 @@ const CardAbout = ({ imageurl, header, secondHeader, text, link=null }) => {
           {text}
           </Text>
           {!!link &&
-             <Pressable style={styles.button} >
+             <Pressable style={styles.button} onPress={acion} >
             <Text style={styles.text}>הרחב על { header}</Text>
-    </Pressable>
+          </Pressable>
           }
       </Block>
     </Block>
     </View>
   );
 }
+const onPress = () =>{}
+
 export default CardAbout;
 
 const styles = StyleSheet.create({

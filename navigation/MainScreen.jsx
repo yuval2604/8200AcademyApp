@@ -1,11 +1,12 @@
 import React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import TabOneScreen from './TabOneScreen';
-import TabTwoScreen from './TabTwoScreen';
+import TabOneScreen from '../screens/TabOneScreen';
+import TabTwoScreen from '../screens/TabTwoScreen';
 import Icon from "react-native-vector-icons/FontAwesome";
 import theme  from "../constants/theme2";
 import {createAppContainer} from 'react-navigation';
-
+import Elaborate from "../screens/Elaborate";
+import OperationSystems from '../screens/OperationSystem';
 const MainScreen = createBottomTabNavigator(
     {
 
@@ -26,7 +27,7 @@ const MainScreen = createBottomTabNavigator(
             }
         },
         Inside: {
-            screen: TabTwoScreen,
+            screen: OperationSystems,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="bookmark-o" size={25} color={tintColor} />
@@ -41,6 +42,7 @@ const MainScreen = createBottomTabNavigator(
                 )
             }
         },
+       
     },
     {
         initialRouteName: 'About',
