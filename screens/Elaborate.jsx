@@ -25,7 +25,7 @@ const Elaborate = (props) => {
           <Text style={{ marginRight: 10, fontSize: 24, fontWeight: 'bold' }} >{ props.header}</Text>
         </View>
       )}>
-      <View style={{ height: 500 }}>
+      <View style={{ height: window.height }}>
          {props.children}
       </View>
     </ParallaxScrollView>

@@ -4,6 +4,7 @@ import TabOneScreen from '../screens/TabOneScreen';
 import MainPage from "./MainScreen";
 import Elaborate from '../screens/Elaborate';
 import OperationSystems from '../screens/OperationSystem';
+import Hardware from '../screens/Hardware';
 const MainNavigator = createStackNavigator({
 
     Main: {
@@ -12,6 +13,10 @@ const MainNavigator = createStackNavigator({
     },
     OperationSystems: {
         screen: OperationSystems,
+        navigationOptions: {header:null}
+    },
+    Hardware: {
+        screen: Hardware,
         navigationOptions: {header:null}
     }
 
