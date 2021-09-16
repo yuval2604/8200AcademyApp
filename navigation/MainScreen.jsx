@@ -7,6 +7,8 @@ import theme  from "../constants/theme2";
 import {createAppContainer} from 'react-navigation';
 import About from '../screens/About';
 import OperationSystems from '../screens/OperationSystem';
+import GamaExlanation from "../screens/GamaExplanation"
+
 const MainScreen = createBottomTabNavigator(
     {
 
@@ -26,8 +28,8 @@ const MainScreen = createBottomTabNavigator(
                 )
             }
         },
-        Inside: {
-            screen: OperationSystems,
+        Gama: {
+            screen: GamaExlanation,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="bookmark-o" size={25} color={tintColor} />

@@ -6,6 +6,7 @@ import Elaborate from '../screens/Elaborate';
 import OperationSystems from '../screens/OperationSystem';
 import Hardware from '../screens/Hardware';
 import About from '../screens/About';
+import GamaExlanation from "../screens/GamaExplanation"
 const MainNavigator = createStackNavigator({
 
     Main: {

@@ -64,12 +64,20 @@ const mockCard = [
     imageurl: require("../assets/images/cpu.jpeg"),
   },
   {
-    subject: "מבוא למדעי המחשב",
-    header: 'המיונים למסלול גאמ"א – סייבר',
-    secondHeader: "הדרך הבטוחה לקבלה ל8200",
-    text: "קורס 8200 אקדמי הוא היחיד בארץ שמכשיר ומכין אתכם/ן לעבור את כל השלבים",
-    imageurl: require("../assets/images/gama.png"),
+    subject: "Hardware",
+    header: "מבוא למדעי המחשב",
+    secondHeader: "מבוא למדעי המחשב ",
+    text: "נדבר על משתנים ,מחלקות ,אובייקטים, ירושה , פולימורפיזם ",
+    imageurl: require("../assets/images/onezero.jpeg"),
   },
+  {
+    subject: "Hardware",
+    header: "רשתות",
+    secondHeader: "נדבר על פרוטוקולים ורכיבי רשת ",
+    text: "נדבר על פרוטוקולים כמו TCP UDP HTTP DNS SMTP וכן על הרכיבים כמו ראוטר או switch",
+    imageurl: require("../assets/images/network.jpeg"),
+  },
+  
 ];
 const styles = StyleSheet.create({
   container: {
