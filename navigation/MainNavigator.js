@@ -1,10 +1,11 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from "react-navigation-stack"
-import TabOneScreen from '../screens/TabOneScreen';
+import Home from '../screens/Home';
 import MainPage from "./MainScreen";
 import Elaborate from '../screens/Elaborate';
 import OperationSystems from '../screens/OperationSystem';
 import Hardware from '../screens/Hardware';
+import About from '../screens/About';
 const MainNavigator = createStackNavigator({
 
     Main: {
@@ -17,6 +18,10 @@ const MainNavigator = createStackNavigator({
     },
     Hardware: {
         screen: Hardware,
+        navigationOptions: {header:null}
+    },
+    About: {
+        screen: About,
         navigationOptions: {header:null}
     }
 

@@ -16,13 +16,13 @@ class BasicUsage extends React.Component {
       <View style={styles.container}>
         <View style={styles.header}>
         <HeaderImageScrollView
-          maxHeight={180}
+          maxHeight={200}
           minHeight={180}
           headerImage={require('../assets/images/8200Image.jpeg')}
           overlayColor="green"
           renderForeground={() => (
             <View style={styles.titleContainer}>
-              <Text style={styles.imageTitle}>8200Academy       </Text>
+              <Text style={styles.imageTitle}>       </Text>
             </View>
           )}
         >
@@ -72,6 +72,7 @@ const mockCard = [
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#e4ece6'
   },
   header: {
     height:'40%', 

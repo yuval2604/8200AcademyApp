@@ -1,17 +1,17 @@
 import React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import Home from '../screens/Home';
+import GamaSubject from '../screens/GamaSubject';
 import Icon from "react-native-vector-icons/FontAwesome";
 import theme  from "../constants/theme2";
 import {createAppContainer} from 'react-navigation';
-import Elaborate from "../screens/Elaborate";
+import About from '../screens/About';
 import OperationSystems from '../screens/OperationSystem';
 const MainScreen = createBottomTabNavigator(
     {
 
         About: {
-            screen: TabOneScreen,
+            screen: Home,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="search" size={25} color={tintColor} />
@@ -19,7 +19,7 @@ const MainScreen = createBottomTabNavigator(
             }
         },
         Subject: {
-            screen: TabTwoScreen,
+            screen: GamaSubject,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="sort" size={25} color={tintColor} />
@@ -34,8 +34,8 @@ const MainScreen = createBottomTabNavigator(
                 )
             }
         },
-        Profile: {
-            screen: TabOneScreen,
+        Academy: {
+            screen: About,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name="user-o" size={25} color={tintColor} />

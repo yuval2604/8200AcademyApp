@@ -7,15 +7,15 @@ import Button from './Button';
 import { createStackNavigator, createAppContainer } from 'react-navigation';  
 
 
-const CardAbout = ({ acion =null , imageurl, header, secondHeader, text, link = null }) => {
+const CardAbout = ({ acion =null, imageurl, header, secondHeader, text, link = null, height=400, imageHeight='35%' }) => {
   return (
    <View style={styles.container}>
-     <Block marginTop={20} paddingHorizontal={50} style={styles.BlockContainer}height={400} paddingTop={10}>
+     <Block marginTop={20} paddingHorizontal={50} style={styles.BlockContainer} height={height} paddingTop={10}>
       <Block marginBottom={8}>
         <Image
           resizeMode="cover"
           source = {imageurl}
-          style={{width: '100%', height:'35%'}}
+          style={{width: '100%', height: imageHeight? imageHeight : '35%'}}
         />
          <Text p secondary marginTop={16} style={styles.header}>
           {header}
